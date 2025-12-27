@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Бесконечная страница Андрюхи</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+    .hint {
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.15);
+      margin-top: 20px;
+      transition: transform 0.4s ease;
+    }
+    img.jump {
+      animation: jump 0.6s cubic-bezier(.34,1.56,.64,1);
+    }
+    img.jump.big {
+      animation: jumpBig 0.8s cubic-bezier(.34,1.56,.64,1);
+    }
+    @keyframes jumpBig {
+      0% { transform: translateY(0) scale(1); }
+      40% { transform: translateY(-60px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    @keyframes jump {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0); }
+    .glitch {
+      position: relative;
+      animation: glitch 1s infinite; }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      50% { text-shadow: -2px 0 red, 2px 0 blue; }
+      100% { text-shadow: 0 0 red, 0 0 blue; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+    }
+    .final {
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+    }
+    .final h1 {
+      font-size: 3rem;
+    }
+    .fake-end {
+      background: #000;
+      color: #aaa;
+    }
+    .shake {
+      animation: shake 0.5s;
+    }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+<div id="loader" style="position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;">
+  <div style="font-size:1.5rem;opacity:.8">Загрузка страницы…</div>
+  <div id="loadText" style="margin-top:10px;opacity:.6">Инициализация бесконечности</div>
+</div>
+<audio id="scrollSound" preload="auto">
+  <source src="scroll.mp3" type="audio/mpeg">
+</audio>
+
+  <section>
+    <h1>Здарова, Андрюха! 👋</h1>
+<iframe src="https://drive.google.com/file/d/1So2DJjSVvaxlOyV3S68OmcSTf2Iard4h/preview" width="640" height="480"></iframe>
+    <p>
+      Я тут чё-то наму́дрил, полез куда-то не туда и теперь вообще заплутался 🤯<br><br>
+      Помоги разобраться с этой бесконечной страницей…
+    </p>
+    <div class="hint">Листай колесиком мыши вниз ⬇️</div>
+  </section>
+
+  <section>
+    <h2 class="glitch reveal">Стоп…</h2>
+<iframe src="https://drive.google.com/file/d/1hPTaFcD5YnFAdwmQE-KwMLifFL_Nm1on/preview" width="640" height="480"></iframe>
+    <p>
+      Ты тоже это видишь? 🤨<br>
+      Походу страница реально бесконечная…
+    </p>
+  </section>
+
+  <section>
+    <h2>Ладно, раз уж ты тут</h2>
+    <p>
+      Держи порцию странного контента 😎
+    </p>
+  <iframe src="https://drive.google.com/file/d/1ZuSpB-PeaiFLkko5Dq16J_FCfH2cSxG1/preview" width="640" height="480"></iframe>
+  </section>
+
+  <section>
+    <h2>Не останавливайся!</h2>
+    <p>
+      Почти дошли… наверное 😅
+    </p>
+    <iframe src="https://drive.google.com/file/d/1yKknW1Ul3_lq_q7f4b42qcOHzXDmpGqG/preview" width="640" height="480"></iframe>
+  </section>
+
+  <section>
+    <h2>Серьёзно</h2>
+    <p>
+      Я обещал, что тут будет смысл. И он будет 👀
+    </p>
+  </section>
+
+    <section class="fake-end">
+    <h2>Конец страницы</h2>
+    <p>Ну всё, дальше пустота 😐</p>
+  </section>
+
+  <section class="final">
+<iframe src="https://drive.google.com/file/d/1mEXx0B7RSKtnfMmuz5W6O8Qwj10MGzn3/preview" width="640" height="480"></iframe>
+    <h1>🎉 С ДНЁМ РОЖДЕНИЯ, АНДРЮХА! 🎉</h1>
+    <p>
+      Желаю тебе здоровья, кайфа от жизни, правильных людей рядом<br>
+      и чтобы ты всегда доходил до конца — даже если страница бесконечная 😉
+    </p>
+  </section>
+
+<script>
+  // ===== ФЕЙКОВАЯ ЗАГРУЗКА =====
+  const loader = document.getElementById('loader');
+  const loadText = document.getElementById('loadText');
+  const steps = [
+    'Инициализация бесконечности',
+    'Загрузка приколов',
+    'Калибровка скролла',
+    'Почти готово…',
+    'Ещё секундочку…'
+  ];
+  let step = 0;
+  const loaderInterval = setInterval(() => {
+    loadText.textContent = steps[step % steps.length];
+    step++;
+  }, 700);
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      clearInterval(loaderInterval);
+      loader.style.opacity = '0';
+      setTimeout(() => loader.remove(), 600);
+    }, 2500);
+  });
+
+  // ===== СКРОЛЛ / ЭФФЕКТЫ =====
+  let lastScroll = 0;
+  let sound = document.getElementById('scrollSound');
+  let cooldown = false;
+  let eggCounter = 0;
+
+  const reveals = document.querySelectorAll('.reveal');
+  const images = document.querySelectorAll('img');
+
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+
+    // пасхалка: агрессивный скролл
+    if (Math.abs(current - lastScroll) > 300) {
+      document.body.classList.add('shake');
+      eggCounter++;
+      setTimeout(() => document.body.classList.remove('shake'), 500);
+      window.scrollTo({ top: lastScroll, behavior: 'smooth' });
+      if (eggCounter === 5) {
+        alert('🥚 Пасхалка найдена! Андрюха, ты упорный 😄');
+      }
+      return;
+    }
+
+    // звук прокрутки
+    if (!cooldown && sound) {
+      sound.currentTime = 0;
+      sound.play();
+      cooldown = true;
+      setTimeout(() => cooldown = false, 200);
+    }
+
+    // появление текста
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 120) {
+        el.classList.add('visible');
+      }
+    });
+
+    // ПРЫГАЮЩИЕ ФОТО (усиленные)
+    images.forEach((img, i) => {
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight / 1.2) {
+        const cls = i % 3 === 0 ? 'big' : '';
+        img.classList.add('jump');
+        if (cls) img.classList.add(cls);
+        setTimeout(() => img.classList.remove('jump','big'), 900);
+      }
+    });
+
+    lastScroll = current;
+  });
+</script>
+</body>
+</html>
