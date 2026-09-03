@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Андрій у біскінечності!</title>
+  <title>Братуха, с днём рождения!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -12,6 +12,7 @@
       color: #fff;
       overflow-x: hidden;
     }
+
     section {
       min-height: 100vh;
       display: flex;
@@ -20,76 +21,97 @@
       flex-direction: column;
       text-align: center;
       padding: 40px 20px;
+      box-sizing: border-box;
     }
+
     h1, h2 {
       margin-bottom: 20px;
     }
+
     p {
       font-size: 1.2rem;
-      max-width: 700px;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 0 auto;
     }
+
     .hint {
       opacity: 0.7;
       font-size: 0.9rem;
       margin-top: 20px;
     }
-    img {
-      max-width: 90%;
-      border-radius: 16px;
-      box-shadow: 0 0 30px rgba(255,255,255,0.15);
-      margin-top: 20px;
-      transition: transform 0.4s ease;
-    }
-    img.jump {
-      animation: jump 0.6s cubic-bezier(.34,1.56,.64,1);
-    }
-    img.jump.big {
-      animation: jumpBig 0.8s cubic-bezier(.34,1.56,.64,1);
-    }
-    @keyframes jumpBig {
-      0% { transform: translateY(0) scale(1); }
-      40% { transform: translateY(-60px) scale(1.05); }
-      100% { transform: translateY(0) scale(1); }
-    }
-    @keyframes jump {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-30px); }
-      100% { transform: translateY(0); }
-    }
+
     .reveal {
       opacity: 0;
       transform: translateY(40px);
       transition: all 0.8s ease;
     }
+
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0); }
+      transform: translateY(0);
+    }
+
     .glitch {
       position: relative;
-      animation: glitch 1s infinite; }
+      animation: glitch 1s infinite;
+    }
+
     @keyframes glitch {
       0% { text-shadow: 2px 0 red, -2px 0 blue; }
       50% { text-shadow: -2px 0 red, 2px 0 blue; }
       100% { text-shadow: 0 0 red, 0 0 blue; }
     }
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
-      p { font-size: 1rem; }
+
+    .phrase {
+      min-height: 75vh;
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-weight: 900;
     }
-    .final {
-      background: linear-gradient(135deg, #ff0080, #7928ca);
+
+    .phrase p {
+      font-size: clamp(1.2rem, 3vw, 2rem);
     }
-    .final h1 {
-      font-size: 3rem;
-    }
+
     .fake-end {
       background: #000;
       color: #aaa;
     }
+
+    .final {
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+      min-height: 100vh;
+    }
+
+    .final h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+    }
+
+    .video-wrap {
+      width: min(100%, 900px);
+      margin-top: 30px;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 0 35px rgba(0,0,0,.35);
+    }
+
+    .video-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
     .shake {
       animation: shake 0.5s;
     }
+
     @keyframes shake {
       0% { transform: translateX(0); }
       25% { transform: translateX(-5px); }
@@ -97,80 +119,117 @@
       75% { transform: translateX(-5px); }
       100% { transform: translateX(0); }
     }
+
+    @media (max-width: 768px) {
+      p { font-size: 1rem; }
+      section { padding: 30px 16px; }
+    }
   </style>
 </head>
+
 <body>
+
 <div id="loader" style="position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;">
   <div style="font-size:1.5rem;opacity:.8">Вивчаємо нову мову..</div>
   <div id="loadText" style="margin-top:10px;opacity:.6">Роздумуємо за смисл в смислі..</div>
 </div>
+
 <audio id="scrollSound" preload="auto">
   <source src="scroll.mp3" type="audio/mpeg">
 </audio>
 
-  <section>
-    <h1> Здоровенькі були, Андрій Батькович! 👋</h1>
-<iframe src="https://drive.google.com/file/d/1So2DJjSVvaxlOyV3S68OmcSTf2Iard4h/preview" width="640" height="480"></iframe>
-    <p>
-      Щось таке придумав і й на тобі вже копаюсь в ціх схемах.. 🤯<br><br>
-      Допоможи відкрутити цю сторінку знизу.
-    </p>
-    <div class="hint">крути крути колесико, крути крути овальное ⬇️</div>
-  </section>
+<section>
+  <h1>Братуха, поздравляю с днём рождения! 🎉</h1>
+  <p>
+    Желаю улыбку до ушей, позитива, радости, веселых класных моментов, чтоб все вокруг радывало!
+    Прошли через многое, видели дохуя, житуха потрепала немного ну и нече, она закаляла в тебе характер,
+    силу, волю, осталось только выбрать цель чёткую не бабскую, и медленно но уверенно ити к ней!
+    Всё будет, не ссы! Тачки, хаты, тёлки, бабки еще вся жизнь впереди, и с такой закалкой,
+    море уже по колено)
+  </p>
+  <div class="hint">Крути колесико вниз. Там дальше самое интересное ⬇️</div>
+</section>
 
-  <section>
-    <h2 class="glitch reveal">А ну СТОПЄ, куди тии так розігнався хлопець?</h2>
-<iframe src="https://drive.google.com/file/d/1hPTaFcD5YnFAdwmQE-KwMLifFL_Nm1on/preview" width="640" height="480"></iframe>
-  
-  </section>
+<section class="phrase">
+  <h2 class="glitch reveal">Проматуем время</h2>
+  <p class="reveal">Годы идут, а мы всё ещё здесь. Значит, всё правильно делаем 😎</p>
+</section>
 
-  <section>
-    <h2>Ладно, щось перекрутив..</h2>
-    <p>
-      Ти диви як схудав, голодом морят дитину(( 
-    </p>
-  <iframe src="https://drive.google.com/file/d/1ZuSpB-PeaiFLkko5Dq16J_FCfH2cSxG1/preview" width="640" height="480"></iframe>
-  </section>
+<section class="phrase">
+  <h2 class="reveal">Вспоминаем старое</h2>
+  <p class="reveal">Прошлое не забываем — просто периодически достаём самые ебанутые воспоминания.</p>
+</section>
 
-  <section>
-    <h2>Щож я сказати хотів</h2>
-    <p>
-     короче
-    </p>
-      <iframe src="https://drive.google.com/file/d/1hUZVhCUYExz4Q15wOp-injuwILrc9bQ-/preview" width="640" height="480"></iframe>
-<p class="reveal" style="margin-top:30px;font-style:italic;opacity:0.9">
-Нехай проблеми та незгоди,<br>
-не роблять тобі в житті погоди,<br>
-хай щастить та будь здоровий!
-</p>
-    <iframe src="https://drive.google.com/file/d/1Nfk7IATwzQD5jAl5U-8pjomLPGZ42ucu/preview" width="640" height="480"></iframe>
-  </section>
+<section class="phrase">
+  <h2 class="glitch reveal">Шоб хуй стоял и серце билось</h2>
+  <p class="reveal">Ну а как ещё пожелать человеку настоящего мужского счастья? 😂</p>
+</section>
 
-    <section class="fake-end">
-    <h2>Станція Академгородок, КІНЦЕВА, виходимо з вагонів і незабуваємо свої речі!</h2>
-    <p>Далі поїзд не їде( 😐</p>
-  </section>
+<section class="phrase">
+  <h2 class="reveal">КРЯЯЯЯЯ</h2>
+  <p class="reveal">Без этого любой день рождения считается недействительным.</p>
+</section>
 
- <section class="final">
-<h1 class="glitch">😄 Андрюха, посміхнись! 😄</h1>
-<p class="reveal">
-<h1 style="margin-top:40px">🎉З Днем народження, Андрію! Бажаю тобі щастя, здоров’я і всього найкращого! 🎉</h1>
-  <iframe src="https://drive.google.com/file/d/1mEXx0B7RSKtnfMmuz5W6O8Qwj10MGzn3/preview" width="640" height="480"></iframe>
-</p>
+<section class="phrase">
+  <h2 class="glitch reveal">ЗА АНИМЕ 🍥</h2>
+  <p class="reveal">Чтобы вайб был правильный, сюжет интересный, а филлеров в жизни поменьше.</p>
+</section>
+
+<section>
+  <h2 class="reveal">Стелем красную дорожку для самого крутого мидера 👑</h2>
+  <p class="reveal">
+    Кароче чё я, напути праведном ты уже, работа бронь, близкие рядом, даж какие они не были но рядом и помогут еси попросишь,
+    не забывай просить, и на великую цель любой айсберг ростает.
+  </p>
+</section>
+
+<section class="fake-end">
+  <h2>Станция «Уже почти всё», КОНЕЧНАЯ, выходим из вагона и незабываем свои вещи!</h2>
+  <p>Дальше поезд не едет… 😐</p>
+  <p class="hint">Хотя нет. Есть ещё одно.</p>
+</section>
+
+<section class="final">
+  <h1 class="glitch">Всё еще впереди! 🚀</h1>
+
+  <p class="reveal">
+    Ну и ето -_6--7 епта)<br><br>
+    <strong>С 82 летием тя плесень!) 😂❤️</strong>
+  </p>
+
+  <div class="video-wrap reveal">
+    <iframe
+      src="https://drive.google.com/file/d/1AP7Ncm-KU2xAc2QDiN6jzCCmQzi6xyIy/view?usp=sharing"
+      title="Подарочное видео"
+      allow="autoplay">
+    </iframe>
+
+    <a
+      class="video-link"
+      href="https://drive.google.com/file/d/1AP7Ncm-KU2xAc2QDiN6jzCCmQzi6xyIy/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer">
+      Открыть видео в Google Drive ↗
+    </a>
+  </div>
 </section>
 
 <script>
   // ===== ФЕЙКОВАЯ ЗАГРУЗКА =====
   const loader = document.getElementById('loader');
   const loadText = document.getElementById('loadText');
+
   const steps = [
     'Розбираємо уламки',
-    'Підпалюємо Кремль',
-    'Накриваємо куполом країну',
-    'Відмовляємо амереці до ступу в ЗСУ',
+    'Проматуємо час',
+    'Вспоминаем старое',
+    'КРЯЯЯЯЯ',
+    'Проверяем, шоб хуй стоял и серце билось',
     'Прокидаємось)'
   ];
+
   let step = 0;
+
   const loaderInterval = setInterval(() => {
     loadText.textContent = steps[step % steps.length];
     step++;
@@ -180,63 +239,62 @@
     setTimeout(() => {
       clearInterval(loaderInterval);
       loader.style.opacity = '0';
+      loader.style.transition = 'opacity .6s ease';
+
       setTimeout(() => loader.remove(), 600);
     }, 4000);
   });
 
   // ===== СКРОЛЛ / ЭФФЕКТЫ =====
   let lastScroll = 0;
-  let sound = document.getElementById('scrollSound');
+  const sound = document.getElementById('scrollSound');
   let cooldown = false;
   let eggCounter = 0;
 
   const reveals = document.querySelectorAll('.reveal');
-  const images = document.querySelectorAll('img');
 
   window.addEventListener('scroll', () => {
     const current = window.scrollY;
 
-    // пасхалка: агрессивный скролл
+    // Пасхалка: агрессивный скролл
     if (Math.abs(current - lastScroll) > 300) {
       document.body.classList.add('shake');
       eggCounter++;
+
       setTimeout(() => document.body.classList.remove('shake'), 500);
-      window.scrollTo({ top: lastScroll, behavior: 'smooth' });
+
+      window.scrollTo({
+        top: lastScroll,
+        behavior: 'smooth'
+      });
+
       if (eggCounter === 5) {
-        alert('🥚 Пасхалка найдена! Андрюха, ты упорный 😄');
+        alert('🥚 Пасхалка найдена! Братуха, ты упорный 😄');
       }
+
       return;
     }
 
-    // звук прокрутки
+    // Звук прокрутки
     if (!cooldown && sound) {
       sound.currentTime = 0;
-      sound.play();
+      sound.play().catch(() => {});
       cooldown = true;
       setTimeout(() => cooldown = false, 200);
     }
 
-    // появление текста
+    // Появление текста
     reveals.forEach(el => {
       const rect = el.getBoundingClientRect();
+
       if (rect.top < window.innerHeight - 120) {
         el.classList.add('visible');
-      }
-    });
-
-    // ПРЫГАЮЩИЕ ФОТО (усиленные)
-    images.forEach((img, i) => {
-      const rect = img.getBoundingClientRect();
-      if (rect.top < window.innerHeight / 1.2) {
-        const cls = i % 3 === 0 ? 'big' : '';
-        img.classList.add('jump');
-        if (cls) img.classList.add(cls);
-        setTimeout(() => img.classList.remove('jump','big'), 900);
       }
     });
 
     lastScroll = current;
   });
 </script>
+
 </body>
 </html>
